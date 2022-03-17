@@ -1,0 +1,66 @@
+*, *::before, *::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #450000,#5e0000);
+
+}
+
+.dodawanie {
+    position: relative; 
+    display: grid;
+    font-size: 2rem;
+}
+
+.dodawanie .wyswietl{
+    grid-column: span 4;
+    height: 100px;
+    border: 1px solid rgba(0,0,0,.50);
+    outline: none;
+    padding: 10px;
+    font-size: 24px;
+    background: rgba(255,255,255,.70);
+}
+
+.dodawanie span{
+    display: grid;
+    border: 1px solid rgba(0,0,0,.50);
+    width: 100px;
+    height: 100px;
+    outline: none;
+    background: rgba(255,255,255,.50);
+    place-items: center;
+}
+
+.dodawanie span:active{
+    background: rgba(255,255,255,.70) !important;
+}
+
+.dodawanie span.reset{
+    background: #ff3030a4;
+
+}
+
+.dodawanie span.special{
+    grid-row: span 2;
+    height: 200px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    background: #058085;
+}
+
+.dodawanie span.apply{
+    background: #038118;
+    grid-column: span 4;
+    width: 400px;
+}
