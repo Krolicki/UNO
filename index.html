@@ -1,26 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content=" maximum-scale=1.0, user-scalable=0">
     <title>UNO</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <form class="dodawanie" name="dodaj">
-        <input class="wyswietl" type="text" name="suma" readonly="" value="0">
-        <span class="num" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 1" >1</span>
-        <span class="num" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 2" >2</span>
-        <span class="num" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 3" >3</span>
-        <span class="num special" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 10" >Specjalna</span>
-        <span class="num" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 4" >4</span>
-        <span class="num" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 5" >5</span>
-        <span class="num" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 6" >6</span>
-        <span class="num" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 7" >7</span>
-        <span class="num" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 8" >8</span>
-        <span class="num" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 9" >9</span>
-        <span class="num reset" onclick="document.dodaj.suma.value = 0" >C</span>
-        <span class="num apply" onclick="" >Zatwierdź</span>
-    </form>
-
+    <div class="table">
+        <div class="first">
+            <span class="text" name="name-first">Player1:</span><br><span class="text" name="points-first">0</span><br>
+        </div>
+        <div class="second">
+            <span class="text" name="name-second" >Player2: </span><br><span class="text" name="points-second">0</span>
+        </div>
+    </div>
+    <div class="panel">
+        <form class="dodawanie" name="dodaj">
+            <input class="wyswietl" type="text" name="suma" readonly="" value="0">
+            <span class="num" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 1" >1</span>
+            <span class="num" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 2" >2</span>
+            <span class="num" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 3" >3</span>
+            <span class="num special" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 10" >Specjalna</span>
+            <span class="num" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 4" >4</span>
+            <span class="num" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 5" >5</span>
+            <span class="num" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 6" >6</span>
+            <span class="num" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 7" >7</span>
+            <span class="num" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 8" >8</span>
+            <span class="num" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 9" >9</span>
+            <span class="num reset" onclick="document.dodaj.suma.value = 0" >C</span>
+            <span class="num apply" onclick="" >Zatwierdź</span>
+        </form>
+    </div>
 
 
 
