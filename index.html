@@ -8,18 +8,18 @@
 </head>
 <body>
     <div class="table">
-        <div class="first">
+        <div class="first" onclick="enableForm()">
             <span class="text" name="name-first">Player1:</span><br><span class="text" name="points-first">0</span><br>
         </div>
-        <div class="second">
+        <div class="second" onclick="enableForm()">
             <span class="text" name="name-second" >Player2: </span><br><span class="text" name="points-second">0</span>
         </div>
     </div>
     <div class="panel">
-        <form class="dodawanie" name="dodaj">
+        <form class="dodawanie" name="dodaj" >
             <input class="wyswietl" type="text" name="suma" readonly="" value="0">
-            <span class="num" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 1" >1</span>
-            <span class="num" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 2" >2</span>
+            <span class="num" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 1" name="sp">1</span>
+            <span class="num" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 2" name="sp">2</span>
             <span class="num" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 3" >3</span>
             <span class="num special" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 10" >Specjalna</span>
             <span class="num" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 4" >4</span>
@@ -29,13 +29,26 @@
             <span class="num" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 8" >8</span>
             <span class="num" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 9" >9</span>
             <span class="num reset" onclick="document.dodaj.suma.value = 0" >C</span>
-            <span class="num apply" onclick="" >Zatwierdź</span>
+            <span class="num apply" onclick="disableForm()" >Zatwierdź</span>
         </form>
     </div>
 
 
+<script>
+    function disableForm() {
+        var num = document.getElementsByClassName('num');
+        for (var i = 0; i < num.length; i++) {
+             num[i].style.pointerEvents = 'none';
+        }
+	}
 
-
-
+    function enableForm(){
+        var num = document.getElementsByClassName('num');
+        for (var i = 0; i < num.length; i++) {
+             num[i].style.pointerEvents = 'auto';
+        }
+	} 
+    
+</script>
 </body>
 </html>
