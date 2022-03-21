@@ -42,7 +42,7 @@ body{
 }
 
 .table{
-    display: flex;
+    display: none;
     text-align: center;
     align-items: center;
     position: relative;
@@ -57,8 +57,6 @@ body{
     background: rgba(255,255,255,.5);
     border-radius: var(--rad);
     margin: 20px;
-
-
     display: block;
     overflow-wrap: break-word;
     white-space: normal;
@@ -66,6 +64,7 @@ body{
 }
 
 .panel{
+    display: none;
     position: relative;
     margin-top: 20px;
 }
@@ -129,4 +128,31 @@ body{
     background: #038118;
     grid-column: span 4;
     width: calc(var(--size)*4);
+}
+
+.names{
+    display: block;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    top: 50%;
+    font-size: var(--fsize);
+}
+
+.names input{
+    font-size: var(--fsize);
+    align-self: center;
+    width: calc(var(--size)*4);
+    height: var(--size);
+    margin-bottom: 20px;
+}
+
+.apply{
+    display: inline-block;;
+    background: #009c1a;
+    width: calc(var(--size)*4);
+    height: var(--size);
+    border: none;
+    font-size: var(--fsize);
+
 }

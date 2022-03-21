@@ -28,3 +28,12 @@ function enableForm(pla){
             break;
     }
 } 
+
+function hide(ele) {
+    var x = document.getElementById(ele);
+    if (x.style.display === "none") {
+      x.style.display = "flex";
+    } else {
+      x.style.display = "none";
+    }
+  }
