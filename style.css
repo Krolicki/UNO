@@ -107,6 +107,11 @@ body{
     background: rgba(255,255,255,.70) !important;
 }
 
+.disabled{
+    pointer-events: none !important;
+    background: rgba(255,255,255,.2) !important;
+}
+
 .dodawanie span.reset{
     background: #ff3030a4;
 
