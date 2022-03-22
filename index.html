@@ -8,19 +8,19 @@
     <script src="script.js" type="text/javascript"></script>
 </head>
 <body>
-    <div class="names">
+    <div class="names" id="names">
         <form>
-            <input type="text" placeholder="Player 1"><br>
-            <input type="text" placeholder="Player 2"><br>
-            <button class="apply">Start</button>
+            <input type="text" id="p1" placeholder="Player 1"><br>
+            <input type="text" id="p2" placeholder="Player 2"><br>
+            <button type="button" class="apply" onclick="start(document.getElementById('p1').value, document.getElementById('p2').value);">Start</button>
         </form>
     </div>
     <div class="table" id="table">
         <div class="first" id="first" onclick="enableForm('points-first')">
-            <span class="text" name="name-first">Player1:</span><br><span class="text" id="points-first">0</span><br>
+            <span class="text" name="name-first" id="name-first">Player1:</span><br><span class="text" id="points-first">0</span><br>
         </div>
         <div class="second" id="second" onclick="enableForm('points-second')">
-            <span class="text" name="name-second" >Player2: </span><br><span class="text" id="points-second">0</span>
+            <span class="text" name="name-second" id="name-second" >Player2: </span><br><span class="text" id="points-second">0</span>
         </div>
     </div>
     <div class="panel" id="panel">

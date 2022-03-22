@@ -31,9 +31,18 @@ function enableForm(pla){
 
 function hide(ele) {
     var x = document.getElementById(ele);
-    if (x.style.display === "none") {
-      x.style.display = "flex";
-    } else {
-      x.style.display = "none";
-    }
+    x.style.display = "none";
+  }
+
+  function show(ele) {
+    var x = document.getElementById(ele);
+    x.style.display = "flex";
+  }
+
+  function start(player1, player2){
+    document.getElementById("name-first").innerHTML = player1;
+    document.getElementById("name-second").innerHTML = player2;
+    hide("names");
+    show("table");
+    show("panel");
   }
