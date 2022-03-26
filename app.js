@@ -19,14 +19,15 @@ app.get('', (req, res) => {
 	if(pla1 == "" && pla2 == "")
 		res.render('index');
 	else
-		res.render('game');
+		res.render('game', {data: data});
 	
 });
 
 app.post('/set',  function(req ,res){
 	pla1 = req.body.p1;
 	pla2 = req.body.p2;
-	res.render('game', {data: req.body});
+	data = req.body;
+	res.render('game', {data: data});
 	
 });
 
