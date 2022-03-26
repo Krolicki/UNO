@@ -41,7 +41,7 @@ body{
 }
 
 .table{
-    display: none;
+    display: flex;
     text-align: center;
     align-items: center;
     position: relative;
@@ -63,7 +63,7 @@ body{
 }
 
 .panel{
-    display: none;
+    display: flex;
     position: relative;
     margin-top: 20px;
 }

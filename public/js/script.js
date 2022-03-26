@@ -1,5 +1,6 @@
 var player;
 var num = document.getElementsByClassName('num');
+
 function disableForm() {
     for (var i = 0; i < num.length; i++) {
          num[i].classList.add('disabled');

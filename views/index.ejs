@@ -9,37 +9,11 @@
 </head>
 <body>
     <div class="names" id="names">
-        <form>
-            <input type="text" id="p1" placeholder="Player 1"><br>
-            <input type="text" id="p2" placeholder="Player 2"><br>
-            <button type="button" class="apply" onclick="start(document.getElementById('p1').value, document.getElementById('p2').value);">Start</button>
+        <form action="/set" method="POST">
+            <input type="text" name="p1" id="p1" placeholder="Player 1" required><br>
+            <input type="text" name="p2" id="p2" placeholder="Player 2" required><br>
+            <button type="submit" class="apply">Start</button>
         </form>
     </div>
-    <div class="table" id="table">
-        <div class="first" id="first" onclick="enableForm('points-first')">
-            <span class="text" name="name-first" id="name-first">Player1:</span><br><span class="text" id="points-first">0</span><br>
-        </div>
-        <div class="second" id="second" onclick="enableForm('points-second')">
-            <span class="text" name="name-second" id="name-second" >Player2: </span><br><span class="text" id="points-second">0</span>
-        </div>
-    </div>
-    <div class="panel" id="panel">
-        <form class="dodawanie" name="dodaj" >
-            <input class="num wyswietl disabled" type="text" name="suma" readonly="" value="0">
-            <span class="num disabled" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 1" name="sp">1</span>
-            <span class="num disabled" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 2" name="sp">2</span>
-            <span class="num disabled" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 3" >3</span>
-            <span class="num special disabled" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 10" >Specjalna</span>
-            <span class="num disabled" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 4" >4</span>
-            <span class="num disabled" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 5" >5</span>
-            <span class="num disabled" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 6" >6</span>
-            <span class="num disabled" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 7" >7</span>
-            <span class="num disabled" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 8" >8</span>
-            <span class="num disabled" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 9" >9</span>
-            <span class="num reset disabled" onclick="document.dodaj.suma.value = 0" >C</span>
-            <span class="num apply disabled" onclick="disableForm()" >Zatwierdź</span>
-        </form>
-    </div>
-
 </body>
 </html>

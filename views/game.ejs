@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content=" maximum-scale=1.0, user-scalable=0">
+    <title>UNO</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script src="/js/script.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="table" id="table">
+        <div class="first" id="first" onclick="enableForm('points-first')">
+            <span class="text" name="name-first" id="name-first"><%= data.p1 %></span><br><span class="text" id="points-first">0</span><br>
+        </div>
+        <div class="second" id="second" onclick="enableForm('points-second')">
+            <span class="text" name="name-second" id="name-second" ><%= data.p2 %> </span><br><span class="text" id="points-second">0</span>
+        </div>
+    </div>
+    <div class="panel" id="panel">
+        <form class="dodawanie" name="dodaj" >
+            <input class="num wyswietl disabled" type="text" name="suma" readonly="" value="0">
+            <span class="num disabled" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 1" name="sp">1</span>
+            <span class="num disabled" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 2" name="sp">2</span>
+            <span class="num disabled" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 3" >3</span>
+            <span class="num special disabled" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 10" >Specjalna</span>
+            <span class="num disabled" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 4" >4</span>
+            <span class="num disabled" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 5" >5</span>
+            <span class="num disabled" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 6" >6</span>
+            <span class="num disabled" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 7" >7</span>
+            <span class="num disabled" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 8" >8</span>
+            <span class="num disabled" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 9" >9</span>
+            <span class="num reset disabled" onclick="document.dodaj.suma.value = 0" >C</span>
+            <span class="num apply disabled" onclick="disableForm()" >Zatwierdź</span>
+        </form>
+    </div>
+
+</body>
+</html>
