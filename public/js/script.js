@@ -1,7 +1,7 @@
 var player;
 var num = document.getElementsByClassName('num');
 
-function disableForm() {
+function submitPoints() {
     for (var i = 0; i < num.length; i++) {
          num[i].classList.add('disabled');
     }
@@ -10,6 +10,7 @@ function disableForm() {
     document.dodaj.suma.value = 0;
     document.getElementById('first').style.background = "rgba(255,255,255,.5)";
     document.getElementById('second').style.background = "rgba(255,255,255,.5)";
+    //document.getElementById("dodaj").submit();
 }
 
 function enableForm(pla){
@@ -22,21 +23,23 @@ function enableForm(pla){
         case 'points-first':
             document.getElementById('first').style.background = "rgba(0,255,0,.5)";
             document.getElementById('second').style.background = "rgba(255,255,255,.5)";
+            document.getElementById('player').value = 'p1';
             break;
         case 'points-second':
             document.getElementById('second').style.background = "rgba(0,255,0,.5)";
             document.getElementById('first').style.background = "rgba(255,255,255,.5)";
+            document.getElementById('player').value = 'p2';
             break;
     }
 } 
 
 function hide(ele) {
-    var x = document.getElementById(ele);
+    let x = document.getElementById(ele);
     x.style.display = "none";
   }
 
   function show(ele) {
-    var x = document.getElementById(ele);
+    let x = document.getElementById(ele);
     x.style.display = "flex";
   }
 

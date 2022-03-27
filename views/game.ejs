@@ -17,8 +17,9 @@
         </div>
     </div>
     <div class="panel" id="panel">
-        <form class="dodawanie" name="dodaj" >
-            <input class="num wyswietl disabled" type="text" name="suma" readonly="" value="0">
+        <form class="dodawanie" name="dodaj" id="dodaj" action="/update" method="POST">
+            <input type="text" name="player" id="player" style="display : none">
+            <input class="num wyswietl disabled" type="text" name="suma" id="suma" readonly="" value="0">
             <span class="num disabled" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 1" name="sp">1</span>
             <span class="num disabled" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 2" name="sp">2</span>
             <span class="num disabled" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 3" >3</span>
@@ -30,7 +31,7 @@
             <span class="num disabled" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 8" >8</span>
             <span class="num disabled" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 9" >9</span>
             <span class="num reset disabled" onclick="document.dodaj.suma.value = 0" >C</span>
-            <span class="num apply disabled" onclick="disableForm()" >Zatwierdź</span>
+            <button type="submit" class="num apply disabled" onsubmit="submitPoints()" >Zatwierdź</button>
         </form>
     </div>
 
