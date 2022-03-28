@@ -13,11 +13,6 @@ app.use(bodyParser.json());
 app.set('views', './views');
 app.set('view engine' , 'ejs');
 
-var pla1 ="";
-var pla2 ="";
-var points_p1 = 0;
-var points_p2 = 0;
-
 var data = {
 	p1 : "",
 	p2 : "",
