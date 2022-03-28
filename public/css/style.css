@@ -46,16 +46,16 @@ body{
     align-items: center;
     position: relative;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 10px;
   
 }
 
 .first, .second{
     width: calc(var(--size) *2);
-    height: calc(var(--size) *2);
+    height: calc(var(--size) *1);
     background: rgba(255,255,255,.5);
     border-radius: var(--rad);
-    margin: 20px;
+    margin: 10px;
     display: block;
     overflow-wrap: break-word;
     white-space: normal;
@@ -65,7 +65,7 @@ body{
 .panel{
     display: flex;
     position: relative;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .dodawanie {
@@ -95,7 +95,7 @@ body{
     width: var(--size);
     height: var(--size);
     outline: none;
-    background: rgba(255,255,255,.50);
+    background: rgba(230,255,254,.50);
     place-items: center;
     border-radius: var(--rad);
     pointer-events: none;
@@ -124,9 +124,12 @@ body{
 }
 
 .dodawanie button.apply{
-    background: #038118;
+    background: rgba(0,255,0,0.5);
     grid-column: span 4;
     width: calc(var(--size)*4);
+    border: 1px solid rgba(0,0,0,.50);
+    outline: none;
+    border-radius: var(--rad);
 }
 
 .names{
@@ -147,10 +150,21 @@ body{
 }
 
 .apply{
-    display: inline-block;;
+    display: inline-block;
     background: #009c1a;
     width: calc(var(--size)*4);
     height: var(--size);
     border: none;
     font-size: var(--fsize);
+}
+
+.reload{   
+    background: #949494;
+    margin-top: 20px;
+    width: calc(var(--size)*4);
+    height: calc(var(--size) *1);
+    font-size: var(--fsize);
+    border: 1px solid rgba(0,0,0,.50);
+    outline: none;
+    border-radius: var(--rad);
 }

@@ -51,5 +51,9 @@ app.post('/update',  function(req ,res){
 	res.render('game', { data : data});
 });
 
+app.get('/reload',  function(req ,res){
+	res.render('game', { data : data});
+});
+
 app.listen(81);
 console.log('Express App is running on port 81...');
