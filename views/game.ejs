@@ -10,10 +10,12 @@
 <body>
     <div class="table" id="table">
         <div class="first" id="first" onclick="enableForm('points-first')">
-            <span class="text" name="name-first" id="name-first"><%= data.p1 %></span><br><span class="text" id="points-first">0</span><br>
+            <span class="text" name="name-first" id="name-first"><%= data.p1 %></span><br>
+            <span class="text" id="points-first"><%= data.p1points %></span><br>
         </div>
         <div class="second" id="second" onclick="enableForm('points-second')">
-            <span class="text" name="name-second" id="name-second" ><%= data.p2 %> </span><br><span class="text" id="points-second">0</span>
+            <span class="text" name="name-second" id="name-second" ><%= data.p2 %> </span><br>
+            <span class="text" id="points-second"><%= data.p2points %></span>
         </div>
     </div>
     <div class="panel" id="panel">

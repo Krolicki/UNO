@@ -18,8 +18,15 @@ var pla2 ="";
 var points_p1 = 0;
 var points_p2 = 0;
 
+var data = {
+	p1 : "",
+	p2 : "",
+	p1points : 0, 
+	p2points : 0
+}
+
 app.get('', (req, res) => {
-	if(pla1 == "" && pla2 == "")
+	if(data.p1 == "" || data.p2 == "")
 		res.render('index');
 	else
 		res.render('game', {data: data});
@@ -27,26 +34,26 @@ app.get('', (req, res) => {
 });
 
 app.post('/set',  function(req ,res){
-	pla1 = req.body.p1;
-	pla2 = req.body.p2;
-	data = req.body;
+	data.p1 = req.body.p1;
+	data.p2 = req.body.p2;
 	res.render('game', {data: data});
 	
 });
 
 app.post('/update',  function(req ,res){
 	let add_points = parseInt(req.body.suma);
-	switch(req.body.player){
+	let to_who = req.body.player;
+	switch(to_who){
 		case 'p1':
-			points_p1 += add_points;
+			data.p1points += add_points;
 			break;
 		case 'p2':
-			points_p2 += add_points;
+			data.p2points += add_points;
 			break;
 		default:
 			break;
 	}
-	res.send('lmao');
+	res.render('game', { data : data});
 });
 
 app.listen(81);
