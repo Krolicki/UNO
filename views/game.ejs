@@ -22,17 +22,17 @@
         <form class="dodawanie" name="dodaj" id="dodaj" action="/update" method="POST">
             <input type="text" name="player" id="player" style="display : none">
             <input class="num wyswietl disabled" type="text" name="suma" id="suma" readonly="" value="0">
-            <span class="num disabled" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 1" name="sp">1</span>
-            <span class="num disabled" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 2" name="sp">2</span>
-            <span class="num disabled" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 3" >3</span>
-            <span class="num special disabled" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 10" >Specjalna</span>
-            <span class="num disabled" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 4" >4</span>
-            <span class="num disabled" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 5" >5</span>
-            <span class="num disabled" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 6" >6</span>
-            <span class="num disabled" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 7" >7</span>
-            <span class="num disabled" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 8" >8</span>
-            <span class="num disabled" onclick="document.dodaj.suma.value = parseInt(dodaj.suma.value) + 9" >9</span>
-            <span class="num reset disabled" onclick="document.dodaj.suma.value = 0" >C</span>
+            <span class="num disabled" onclick="sum(1)">1</span>
+            <span class="num disabled" onclick="sum(2)">2</span>
+            <span class="num disabled" onclick="sum(3)">3</span>
+            <span class="num special disabled" onclick="sum(10)">Specjalna</span>
+            <span class="num disabled" onclick="sum(4)">4</span>
+            <span class="num disabled" onclick="sum(5)">5</span>
+            <span class="num disabled" onclick="sum(6)">6</span>
+            <span class="num disabled" onclick="sum(7)">7</span>
+            <span class="num disabled" onclick="sum(8)">8</span>
+            <span class="num disabled" onclick="sum(9)">9</span>
+            <span class="num reset disabled" onclick="clearPoints()">C</span>
             <button type="submit" class="num apply disabled" onsubmit="submitPoints()" >Zatwierdź</button>
         </form>
     </div>

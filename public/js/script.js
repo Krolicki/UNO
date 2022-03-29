@@ -5,12 +5,9 @@ function submitPoints() {
     for (var i = 0; i < num.length; i++) {
          num[i].classList.add('disabled');
     }
-    //let points = document.getElementById(player);
-    //points.innerHTML = parseInt(points.innerHTML) + parseInt(document.dodaj.suma.value);
     document.dodaj.suma.value = 0;
     document.getElementById('first').style.background = "rgba(255,255,255,.5)";
     document.getElementById('second').style.background = "rgba(255,255,255,.5)";
-    //document.getElementById("dodaj").submit();
 }
 
 function enableForm(pla){
@@ -33,20 +30,10 @@ function enableForm(pla){
     }
 } 
 
-function hide(ele) {
-    let x = document.getElementById(ele);
-    x.style.display = "none";
-  }
+function sum(toAdd){
+    document.dodaj.suma.value = parseInt(dodaj.suma.value) + toAdd;
+}
 
-  function show(ele) {
-    let x = document.getElementById(ele);
-    x.style.display = "flex";
-  }
-
-  function start(player1, player2){
-    document.getElementById("name-first").innerHTML = player1;
-    document.getElementById("name-second").innerHTML = player2;
-    hide("names");
-    show("table");
-    show("panel");
-  }
+function clearPoints(){
+    document.dodaj.suma.value = 0;
+}
