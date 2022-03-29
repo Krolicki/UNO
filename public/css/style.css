@@ -158,13 +158,18 @@ body{
     font-size: var(--fsize);
 }
 
-.reload{   
+.reloadPanel{   
+    margin-top: calc(var(--size)/2) ;
+}
+
+.reload2{
     background: #949494;
-    margin-top: 20px;
-    width: calc(var(--size)*4);
-    height: calc(var(--size) *1);
-    font-size: var(--fsize);
+    text-decoration: none;
+    font: var(--fsize) Verdana;
+    color: black;
     border: 1px solid rgba(0,0,0,.50);
     outline: none;
     border-radius: var(--rad);
+    margin: 10px;
+    padding: calc(var(--size)/3.5) calc(var(--size)/3.5) calc(var(--size)/3.5) calc(var(--size)/3.5);
 }
