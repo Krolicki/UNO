@@ -13,6 +13,8 @@ app.use(bodyParser.json());
 app.set('views', './views');
 app.set('view engine' , 'ejs');
 
+var endPoints = 100;
+
 var data = {
 	p1 : "",
 	p2 : "",
@@ -29,8 +31,11 @@ app.get('', (req, res) => {
 });
 
 app.post('/set',  function(req ,res){
-	data.p1 = req.body.p1;
-	data.p2 = req.body.p2;
+	if(data.p1 == "" || data.p2 == ""){
+		data.p1 = req.body.p1;
+		data.p2 = req.body.p2;
+		endPoints = req.body.eP;
+	}
 	res.render('game', {data: data});
 	
 });
@@ -48,7 +53,14 @@ app.post('/update',  function(req ,res){
 		default:
 			break;
 	}
-	res.render('game', { data : data});
+	if(data.p1points >= endPoints){
+		res.send('Wygrywa ' + data.p1); 
+	}
+	else if(data.p2points >= endPoints){
+		res.send('Wygrywa ' + data.p2); 
+	}
+	else
+		res.render('game', { data : data});
 });
 
 app.get('/reload',  function(req ,res){
@@ -56,4 +68,4 @@ app.get('/reload',  function(req ,res){
 });
 
 app.listen(81);
-console.log('Express App is running on port 81...');
+console.log('Serwer działa na porcie 81...');
