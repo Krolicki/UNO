@@ -133,17 +133,17 @@ body{
 }
 
 .names{
-    display: block;
-    position: absolute;
-    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     width: 400px;
-    top: 50%;
+    flex-direction: column;
     font-size: var(--fsize);
 }
 
 .names input{
     font-size: var(--fsize);
-    align-self: center;
     width: calc(var(--size)*4);
     height: var(--size);
     margin-bottom: 20px;

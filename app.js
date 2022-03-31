@@ -54,10 +54,11 @@ app.post('/update',  function(req ,res){
 			break;
 	}
 	if(data.p1points >= endPoints){
-		res.send('Wygrywa ' + data.p1); 
+		res.render('win', {winner: data.p1, data : data}); 
+
 	}
 	else if(data.p2points >= endPoints){
-		res.send('Wygrywa ' + data.p2); 
+		res.render('win', {winner: data.p2, data : data}); 
 	}
 	else
 		res.render('game', { data : data});
