@@ -147,6 +147,10 @@ body{
     width: calc(var(--size)*4);
     height: var(--size);
     margin-bottom: 20px;
+    background: rgba(0,0,0,0.8);
+    border : none;
+    padding : 5px;
+    color: white;
 }
 
 .apply{
@@ -162,7 +166,7 @@ body{
     margin-top: calc(var(--size)/2) ;
 }
 
-.reload2{
+.reload{
     background: #949494;
     text-decoration: none;
     font: var(--fsize) Verdana;
@@ -172,4 +176,10 @@ body{
     border-radius: var(--rad);
     margin: 10px;
     padding: calc(var(--size)/3.5) calc(var(--size)/3.5) calc(var(--size)/3.5) calc(var(--size)/3.5);
+}
+
+.new{
+    background: #009c1a;
+    width: calc(var(--size)*4);
+    text-align: center;
 }
