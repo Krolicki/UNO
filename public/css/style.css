@@ -183,3 +183,25 @@ body{
     width: calc(var(--size)*4);
     text-align: center;
 }
+
+input[type=range] {
+  -webkit-appearance: none; 
+  width: calc(var(--size)*4); 
+  margin: 0px;
+  background: transparent; 
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background: rgba(0,0,0,0.8);
+    border-radius: calc(var(--size)/5); 
+}
+
+input[type="range"]::-webkit-slider-thumb {
+-webkit-appearance: none;
+appearance: none;
+   height: calc(var(--size)/3); 
+   width: calc(var(--size)/3); 
+   border-radius: 50%;
+ 
+    background-color: #009c1a;
+}

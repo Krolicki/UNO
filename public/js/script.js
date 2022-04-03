@@ -38,3 +38,7 @@ function sum(toAdd){
 function clearPoints(){
     document.dodaj.suma.value = 0;
 }
+
+function updateTextInput(val){
+    document.getElementById('ilGr').value=val; 
+}
