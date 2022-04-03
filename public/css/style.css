@@ -143,6 +143,7 @@ body{
 }
 
 .names input{
+    display : block;
     font-size: var(--fsize);
     width: calc(var(--size)*4);
     height: var(--size);
@@ -197,11 +198,10 @@ input[type="range"]::-webkit-slider-runnable-track {
 }
 
 input[type="range"]::-webkit-slider-thumb {
--webkit-appearance: none;
-appearance: none;
-   height: calc(var(--size)/3); 
-   width: calc(var(--size)/3); 
-   border-radius: 50%;
- 
+    -webkit-appearance: none;
+    appearance: none;
+    height: calc(var(--size)/3); 
+    width: calc(var(--size)/3); 
+    border-radius: 50%;
     background-color: #009c1a;
 }

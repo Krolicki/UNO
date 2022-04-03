@@ -10,11 +10,13 @@
 <body>
     <div class="names" id="names">
         <form action="/set" method="POST">
-            <input type="text" name="p1" id="p1" placeholder="Gracz 1" maxlength="9" required><br>
-            <input type="text" name="p2" id="p2" placeholder="Gracz 2" maxlength="9" required><br>
-            <input type="number" name="eP" id="endPoints" placeholder="Do ilu punktów?" required><br><br>
-            <a>Ilość graczy: </a><output id="ilGr">2</output><br>
-            <input type="range" name="iloscGraczy" class="slider" value="2" min="2" max="4" oninput="updateTextInput(this.value);"><br>
+            <input type="text" name="p1" id="p1" placeholder="Gracz 1" maxlength="9" required>
+            <input type="text" name="p2" id="p2" placeholder="Gracz 2" maxlength="9" required>
+            <input type="text" name="p3" id="p3" placeholder="Gracz 3" maxlength="9" required style="display : none">
+            <input type="text" name="p4" id="p4" placeholder="Gracz 4" maxlength="9" required style="display : none">
+            <input type="number" name="eP" id="endPoints" placeholder="Do ilu punktów?" required>
+            <a>Ilość graczy: </a><output id="ilGr">2</output>
+            <input type="range" name="iloscGraczy" class="slider" value="2" min="2" max="4" oninput="updateTextInput(this.value);">
             <button type="submit" class="apply">Start</button>
         </form>
     </div>

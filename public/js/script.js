@@ -39,6 +39,31 @@ function clearPoints(){
     document.dodaj.suma.value = 0;
 }
 
+function hide(ele){
+    let x = document.getElementById(ele);
+    x.style.display = 'none';
+}
+function show(ele){
+    let x = document.getElementById(ele);
+    x.style.display = 'block';
+}
+
 function updateTextInput(val){
-    document.getElementById('ilGr').value=val; 
+    document.getElementById('ilGr').value=val;
+    switch(val){
+        case '2':
+            hide("p3");
+            hide("p4");
+            break;
+        case '3':
+            hide("p4");
+            show("p3");
+            break;
+        case '4':
+            show("p3")
+            show("p4");
+            break;
+        default:
+            break;
+    }
 }
