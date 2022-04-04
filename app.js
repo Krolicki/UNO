@@ -22,7 +22,9 @@ var data = {
 	p3 : "",
 	p4 : "",
 	p1points : 0, 
-	p2points : 0
+	p2points : 0,
+	p3points : 0,
+	p4points : 0
 }
 
 app.get('', (req, res) => {
@@ -39,6 +41,10 @@ app.post('/set',  function(req ,res){
 		data.p2 = req.body.p2;
 		endPoints = req.body.eP;
 		go = true;
+		if(req.body.p3 !="")
+			data.p3 = req.body.p3;
+		if(req.body.p4 !="")
+			data.p4 = req.body.p4;
 	}
 	res.render('game', {data: data});
 	
@@ -55,6 +61,12 @@ app.post('/update',  function(req ,res){
 			case 'p2':
 				data.p2points += add_points;
 				break;
+			case 'p3':
+				data.p3points += add_points;
+				break;
+			case 'p4':
+				data.p4points += add_points;
+				break;
 			default:
 				break;
 		}
@@ -68,12 +80,20 @@ app.post('/update',  function(req ,res){
 		res.render('win', {winner: 'Wygrywa: ' + data.p2, data : data}); 
 		go = false;
 	}
+	else if(data.p3points >= endPoints){
+		res.render('win', {winner: 'Wygrywa: ' + data.p3, data : data}); 
+		go = false;
+	}
+	else if(data.p3points >= endPoints){
+		res.render('win', {winner: 'Wygrywa: ' + data.p4, data : data}); 
+		go = false;
+	}
 	else
 		res.render('game', { data : data});
 });
 
 app.get('/reload',  function(req ,res){
-	res.render('game', { data : data});
+	res.redirect('/');
 });
 
 app.get('/end',  function(req ,res){
@@ -93,8 +113,12 @@ app.get('/new',  function(req ,res){
 	data = {
 		p1 : "",
 		p2 : "",
+		p3 : "",
+		p4 : "",
 		p1points : 0, 
-		p2points : 0
+		p2points : 0,
+		p3points : 0,
+		p4points : 0
 	}
 	res.render('');
 });

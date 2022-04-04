@@ -17,16 +17,43 @@ function enableForm(pla){
          num[i].classList.remove('disabled');
          num[i].style.pointerEvents = 'auto';
     }
+    
+    let first = document.getElementById('first');
+    let second = document.getElementById('second');
+    let third = document.getElementById('third');
+    let fourth = document.getElementById('fourth');
+    let playerField = document.getElementById('player');
+    
     switch(pla){
+
+        
         case 'points-first':
-            document.getElementById('first').style.background = "rgba(0,255,0,.5)";
-            document.getElementById('second').style.background = "rgba(255,255,255,.5)";
-            document.getElementById('player').value = 'p1';
+            first.style.background = "rgba(0,255,0,.5)";
+            second.style.background = "rgba(255,255,255,.5)";
+            third.style.background = "rgba(255,255,255,.5)";
+            fourth.style.background = "rgba(255,255,255,.5)";
+            playerField.value = 'p1';
             break;
         case 'points-second':
-            document.getElementById('second').style.background = "rgba(0,255,0,.5)";
-            document.getElementById('first').style.background = "rgba(255,255,255,.5)";
-            document.getElementById('player').value = 'p2';
+            first.style.background = "rgba(255,255,255,.5)";
+            second.style.background = "rgba(0,255,0,.5)";
+            third.style.background = "rgba(255,255,255,.5)";
+            fourth.style.background = "rgba(255,255,255,.5)";
+            playerField.value = 'p2';
+            break;
+        case 'points-third':
+            first.style.background = "rgba(255,255,255,.5)";
+            second.style.background = "rgba(255,255,255,.5)";
+            third.style.background = "rgba(0,255,0,.5)";
+            fourth.style.background = "rgba(255,255,255,.5)";
+            playerField.value = 'p3';
+            break;
+        case 'points-fourth':
+            first.style.background = "rgba(255,255,255,.5)";
+            second.style.background = "rgba(255,255,255,.5)";
+            third.style.background = "rgba(255,255,255,.5)";
+            fourth.style.background = "rgba(0,255,0,.5)";
+            playerField.value = 'p4';
             break;
     }
 } 
@@ -48,20 +75,34 @@ function show(ele){
     x.style.display = 'block';
 }
 
+function setRequired(ele, yesno){
+    let x = document.getElementById(ele);
+    if(yesno)
+        x.setAttribute("required", "");
+    else
+        x.removeAttribute("required");
+}
+
 function updateTextInput(val){
     document.getElementById('ilGr').value=val;
     switch(val){
         case '2':
             hide("p3");
             hide("p4");
+            setRequired("p3", false);
+            setRequired("p4", false);
             break;
         case '3':
             hide("p4");
             show("p3");
+            setRequired("p4", false);
+            setRequired("p3", true);
             break;
         case '4':
-            show("p3")
+            show("p3");
             show("p4");
+            setRequired("p3", true);
+            setRequired("p4", true);
             break;
         default:
             break;

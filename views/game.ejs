@@ -18,6 +18,16 @@
             <span class="text" id="points-second"><%= data.p2points %></span>
         </div>
     </div>
+    <div class="table" id="table2">
+        <div class="first" id="third" onclick="enableForm('points-third')">
+            <span class="text" name="name-third" id="name-third"><%= data.p3 %></span><br>
+            <span class="text" id="points-third"><%= data.p3points %></span><br>
+        </div>
+        <div class="second" id="fourth" onclick="enableForm('points-fourth')">
+            <span class="text" name="name-second" id="name-fourth" ><%= data.p4 %> </span><br>
+            <span class="text" id="points-fourth"><%= data.p4points %></span>
+        </div>
+    </div>
     <div class="panel" id="panel">
         <form class="dodawanie" name="dodaj" id="dodaj" action="/update" method="POST">
             <input type="text" name="player" id="player" style="display : none">
@@ -41,5 +51,13 @@
         <a href="/end" class="reload">Zakończ</a>
     </div>
 
+    <script>
+        <% if(data.p3 == "") { %> 
+            hide("third"); 
+        <% } %>
+        <% if(data.p4 == "") { %> 
+            hide("fourth"); 
+        <% } %>
+    </script>
 </body>
 </html>
