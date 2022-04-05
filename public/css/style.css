@@ -53,7 +53,7 @@ body{
 .first, .second{
     width: calc(var(--size) *2);
     height: calc(var(--size) *1);
-    background: rgba(255,255,255,.5);
+    background: rgba(0,0,0,0.25);
     border-radius: var(--rad);
     margin: 0px 10px 0px 10px;
     display: block;
@@ -78,27 +78,33 @@ body{
 .dodawanie .wyswietl{
     grid-column: span 4;
     height: var(--size);
-    border: 1px solid rgba(0,0,0,.60);
+    border: none;
     text-align: center;
-    width: 100%;
-    max-width: calc(var(--size) *4);
+    width: calc(var(--size)*4 + calc(var(--rad)*3));
+    margin-left: calc(var(--rad)/2);
+    margin-bottom: calc(var(--rad)/2);
     outline: none;
     padding: 10px;
     font-size: var(--fsize);
-    background: rgba(255,255,255,.70);
+    color: #c9c9c9;
+    background: rgba(0,0,0,0.30);
     border-radius: var(--rad);
+    box-shadow: 1px 1px var(--rad) black;
 }
 
 .dodawanie span{
     display: grid;
-    border: 1px solid rgba(0,0,0,.50);
+    margin: calc(var(--rad)/2);
+    border: none;
     width: var(--size);
     height: var(--size);
     outline: none;
-    background: rgba(230,255,254,.50);
+    color: #c9c9c9;
+    background: rgba(0,0,0,0.15);
     place-items: center;
     border-radius: var(--rad);
     pointer-events: none;
+    box-shadow: 1px 1px var(--rad) black;
 }
 
 .dodawanie span:active{
@@ -108,28 +114,33 @@ body{
 .disabled{
     pointer-events: none !important;
     background: rgba(255,255,255,.2) !important;
+    box-shadow: none !important;
 }
 
 .dodawanie span.reset{
-    background: #ff3030a4;
+    background: #ba0b0b;
 
 }
 
 .dodawanie span.special{
     grid-row: span 2;
-    height: calc(var(--size)*2);
+    height: calc(var(--size)*2 + var(--rad));
     writing-mode: vertical-rl;
     text-orientation: mixed;
-    background: #058085;
+    background: #076a6e;
 }
 
 .dodawanie button.apply{
     background: rgba(0,255,0,0.5);
     grid-column: span 4;
-    width: calc(var(--size)*4);
-    border: 1px solid rgba(0,0,0,.50);
+    width: calc(var(--size)*4 + calc(var(--rad)*3));
+    margin: calc(var(--rad)/2);
+    margin-right: 0px;
+    border: none;
     outline: none;
     border-radius: var(--rad);
+    color: #ededed;
+    box-shadow: 1px 1px var(--rad) black;
 }
 
 .names{
@@ -168,10 +179,10 @@ body{
 }
 
 .reload{
-    background: #949494;
+    color: #c9c9c9;
+    background: rgba(0,0,0,0.25);
     text-decoration: none;
     font: var(--fsize) Verdana;
-    color: black;
     border: 1px solid rgba(0,0,0,.50);
     outline: none;
     border-radius: var(--rad);
