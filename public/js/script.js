@@ -108,3 +108,13 @@ function updateTextInput(val){
             break;
     }
 }
+
+function confirmEnd(){
+     if(confirm('Zakończyć grę?')){
+         return true;
+    }
+    else{
+        event.stopPropagation(); 
+        event.preventDefault();
+    };
+}
