@@ -148,7 +148,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 400px;
+
     flex-direction: column;
     font-size: var(--fsize);
 }

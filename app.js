@@ -98,15 +98,34 @@ app.get('/reload',  function(req ,res){
 
 app.get('/end',  function(req ,res){
 	go = false;
-	if(data.p1points > data.p2points){
-		res.render('win', {winner: 'Wygrywa: ' + data.p1, data : data}); 
+
+	let highest = Math.max(data.p1points, data.p2points, data.p3points, data.p4points);
+	let winner = "";
+	let count = 0;
+	
+	if(data.p1points == highest){
+		winner += " " + data.p1;
+		count++;
 	}
-	else if(data.p2points > data.p1points){
-		res.render('win', {winner: 'Wygrywa: ' + data.p2, data : data}); 
+	if(data.p2points == highest){
+		winner += " " + data.p2;
+		count++;
 	}
-	else{ 
-		res.render('win', { winner: 'Remis', data : data});
+	if(data.p3points == highest){
+		winner += " " + data.p3;
+		count++;
 	}
+	if(data.p4points == highest){
+		winner += " " + data.p4;
+		count++;
+	}
+	
+	if(count > 1 && data.p3 != "")
+		res.render('win', {winner: 'Wygrywają:' + winner, data : data});
+	else if(count > 1)
+		res.render('win', {winner: 'Remis', data : data});
+	else
+		res.render('win', {winner: 'Wygrywa:' + winner, data : data}); 
 });
 
 app.get('/new',  function(req ,res){
