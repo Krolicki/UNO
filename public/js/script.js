@@ -87,7 +87,10 @@ function updateTextInput(val){
     document.getElementById('ilGr').value=val;
     switch(val){
         case '2':
-            hide("p3");
+            //document.getElementById("p3").classList.add("bye");
+            //document.getElementById("p3").classList.remove("anim");
+            hide("p3")
+            //setTimeout(hide("p3"), 300);
             hide("p4");
             setRequired("p3", false);
             setRequired("p4", false);

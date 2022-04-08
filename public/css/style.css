@@ -216,3 +216,29 @@ input[type="range"]::-webkit-slider-thumb {
     border-radius: 50%;
     background-color: #009c1a;
 }
+
+.anim {
+  animation: anim 0.3s;
+}
+
+@keyframes anim {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+.bye {
+  animation: bye 0.3s;
+}
+
+@keyframes bye {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0);
+  }
+}
