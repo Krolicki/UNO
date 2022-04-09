@@ -68,7 +68,7 @@ function clearPoints(){
 
 function hide(ele){
     let x = document.getElementById(ele);
-    x.style.display = 'none';
+    //x.style.display = 'none';
 }
 function show(ele){
     let x = document.getElementById(ele);
@@ -87,17 +87,19 @@ function updateTextInput(val){
     document.getElementById('ilGr').value=val;
     switch(val){
         case '2':
-            //document.getElementById("p3").classList.add("bye");
-            //document.getElementById("p3").classList.remove("anim");
-            hide("p3")
-            //setTimeout(hide("p3"), 300);
+            //slideOut("p3");
+            document.getElementById('p3').classList.add('slideOut');
+            //setTimeout(() => { hide("p3"); }, 300);
             hide("p4");
             setRequired("p3", false);
             setRequired("p4", false);
             break;
         case '3':
+            slideIn("p3");
+
+            slideIn("p3");
             hide("p4");
-            show("p3");
+            //show("p3");
             setRequired("p4", false);
             setRequired("p3", true);
             break;
@@ -120,4 +122,21 @@ function confirmEnd(){
         event.stopPropagation(); 
         event.preventDefault();
     };
+}
+
+function slideOut(ele){ 
+    let x = document.getElementById(ele);
+    x.style.transition = "all 300ms ease";
+    x.style.height = "0px";
+    x.style.padding = "0px";
+    x.style.marginBottom = "0px";
+}
+
+function slideIn(ele){ 
+    let x = document.getElementById(ele);
+    x.style.display = "block"
+    x.style.transition = "all 300ms ease";
+    x.style.height = "60px";
+    x.style.padding = "5px";
+    x.style.marginBottom = "20px";
 }
