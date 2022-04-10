@@ -68,7 +68,7 @@ function clearPoints(){
 
 function hide(ele){
     let x = document.getElementById(ele);
-    //x.style.display = 'none';
+    x.style.display = 'none';
 }
 function show(ele){
     let x = document.getElementById(ele);
@@ -87,25 +87,20 @@ function updateTextInput(val){
     document.getElementById('ilGr').value=val;
     switch(val){
         case '2':
-            //slideOut("p3");
-            document.getElementById('p3').classList.add('slideOut');
-            //setTimeout(() => { hide("p3"); }, 300);
-            hide("p4");
+            slideOut('p3');
+            slideOut("p4");
             setRequired("p3", false);
             setRequired("p4", false);
             break;
         case '3':
-            slideIn("p3");
-
-            slideIn("p3");
-            hide("p4");
-            //show("p3");
+            slideIn('p3');
+            slideOut('p4');
             setRequired("p4", false);
             setRequired("p3", true);
             break;
         case '4':
-            show("p3");
-            show("p4");
+            slideIn("p3");
+            slideIn("p4");
             setRequired("p3", true);
             setRequired("p4", true);
             break;
@@ -126,17 +121,23 @@ function confirmEnd(){
 
 function slideOut(ele){ 
     let x = document.getElementById(ele);
-    x.style.transition = "all 300ms ease";
-    x.style.height = "0px";
-    x.style.padding = "0px";
-    x.style.marginBottom = "0px";
+    x.classList.remove('slideIn');
+    x.classList.add('slideOut');
 }
 
 function slideIn(ele){ 
     let x = document.getElementById(ele);
-    x.style.display = "block"
-    x.style.transition = "all 300ms ease";
-    x.style.height = "60px";
-    x.style.padding = "5px";
-    x.style.marginBottom = "20px";
+    x.classList.remove('slideOut');
+    x.classList.add('slideIn');
+}
+
+function checkRequired(){
+    console.log("sss");
+    let p3req = document.getElementById("p3");
+    let p4req = document.getElementById("p4");
+    console.log(p3req.required);
+    if(!p3req.required)
+        p3req.value = "";
+    if(!p4req.required)
+        p4req.value = "";
 }
