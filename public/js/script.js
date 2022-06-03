@@ -132,7 +132,6 @@ function slideIn(ele){
 }
 
 function checkRequired(){
-    console.log("sss");
     let p3req = document.getElementById("p3");
     let p4req = document.getElementById("p4");
     console.log(p3req.required);

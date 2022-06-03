@@ -89,7 +89,8 @@ app.post('/update',  function(req ,res){
 		go = false;
 	}
 	else
-		res.render('game', { data : data});
+		//res.render('game', { data : data});
+		res.redirect('/');
 });
 
 app.get('/reload',  function(req ,res){

@@ -1,2 +1,16 @@
 Express App is running on port 81...
 Serwer działa na porcie 81...
+Serwer działa na porcie 81...
+events.js:291
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: EBADF: bad file descriptor, read
+Emitted 'error' event on ReadStream instance at:
+    at internal/fs/streams.js:191:14
+    at FSReqCallback.wrapper [as oncomplete] (fs.js:520:5) {
+  errno: -9,
+  code: 'EBADF',
+  syscall: 'read'
+}
+Serwer działa na porcie 81...
